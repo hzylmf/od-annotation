@@ -1,0 +1,4 @@
+Flask==0.12.2
+PyMySQL==0.7.11
+requests==2.9.1
+flask-login==0.4.1

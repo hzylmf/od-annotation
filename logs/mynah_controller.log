@@ -1,0 +1,170 @@
+2018-01-17 14:48:45,930 INFO: pre-insert new vm data successful [in controller.vm_create:388]
+2018-01-17 14:48:47,136 INFO: post vm data to remote daemon service successful [in controller.vm_create:397]
+2018-01-17 14:48:47,175 INFO: create new vm [vm-04@nero] successful [in controller.vm_create:409]
+2018-01-17 15:00:25,748 INFO: controller process detached at PID: 16752 [in controller.detach_proc:696]
+2018-01-17 15:00:25,969 INFO: controller process detached at PID: 16755 [in controller.detach_proc:696]
+2018-01-17 15:20:07,117 INFO: controller process detached at PID: 17694 [in controller.detach_proc:697]
+2018-01-17 15:20:07,415 INFO: controller process detached at PID: 17697 [in controller.detach_proc:697]
+2018-01-17 15:30:55,868 INFO: controller process detached at PID: 18199 [in controller.detach_proc:697]
+2018-01-17 15:30:56,162 INFO: controller process detached at PID: 18202 [in controller.detach_proc:697]
+2018-01-17 15:31:51,180 INFO: controller process detached at PID: 18257 [in controller.detach_proc:697]
+2018-01-17 15:31:51,405 INFO: controller process detached at PID: 18260 [in controller.detach_proc:697]
+2018-01-17 15:42:30,074 INFO: controller process detached at PID: 18987 [in tool.start_service:136]
+2018-01-17 15:42:30,349 INFO: controller process detached at PID: 18990 [in tool.start_service:136]
+2018-01-17 16:28:34,636 INFO: controller process detached at PID: 20951 [in tool.start_service:137]
+2018-01-17 16:28:34,959 INFO: controller process detached at PID: 20954 [in tool.start_service:137]
+2018-01-17 16:52:20,597 INFO: controller process detached at PID: 22595 [in tool.start_service:146]
+2018-01-17 16:52:20,856 INFO: controller process detached at PID: 22598 [in tool.start_service:146]
+2018-01-17 18:06:55,982 INFO: controller process detached at PID: 26550 [in tool.start_service:146]
+2018-01-17 18:06:56,218 INFO: controller process detached at PID: 26553 [in tool.start_service:146]
+2018-01-18 11:16:26,707 INFO: controller process detached at PID: 19528 [in tool.start_service:146]
+2018-01-18 11:16:26,957 INFO: controller process detached at PID: 19531 [in tool.start_service:146]
+2018-01-18 11:37:11,006 INFO: controller process detached at PID: 21161 [in tool.start_service:146]
+2018-01-18 11:37:11,204 INFO: controller process detached at PID: 21164 [in tool.start_service:146]
+2018-01-18 16:51:31,813 INFO: controller process detached at PID: 5863 [in tool.start_service:146]
+2018-01-18 16:51:32,110 INFO: controller process detached at PID: 5873 [in tool.start_service:146]
+2018-01-18 16:51:59,979 INFO: controller process detached at PID: 5938 [in tool.start_service:146]
+2018-01-18 16:52:00,235 INFO: controller process detached at PID: 5944 [in tool.start_service:146]
+2018-01-18 16:54:58,429 INFO: controller process started at PID: 6370 [in tool.start_service:147]
+2018-01-18 16:54:58,652 INFO: controller process started at PID: 6374 [in tool.start_service:147]
+2018-01-18 16:55:20,519 INFO: controller process started at PID: 6399 [in tool.start_service:147]
+2018-01-18 16:55:20,748 INFO: controller process started at PID: 6405 [in tool.start_service:147]
+2018-01-18 16:55:40,429 INFO: controller process started at PID: 6443 [in tool.start_service:147]
+2018-01-18 16:55:40,645 INFO: controller process started at PID: 6446 [in tool.start_service:147]
+2018-01-18 16:55:45,820 INFO: controller process started at PID: 6456 [in tool.start_service:147]
+2018-01-18 16:55:46,045 INFO: controller process started at PID: 6462 [in tool.start_service:147]
+2018-01-18 17:01:40,594 INFO: controller process started at PID: 6707 [in tool.start_service:146]
+2018-01-18 17:01:40,799 INFO: controller process started at PID: 6710 [in tool.start_service:146]
+2018-01-18 17:03:15,744 INFO: controller process started at PID: 6790 [in tool.start_service:146]
+2018-01-18 17:03:15,965 INFO: controller process started at PID: 6793 [in tool.start_service:146]
+2018-01-18 18:09:04,063 INFO: controller process started at PID: 9300 [in tool.start_service:146]
+2018-01-18 18:09:04,333 INFO: controller process started at PID: 9303 [in tool.start_service:146]
+2018-01-18 21:52:38,732 INFO: controller process started at PID: 17074 [in tool.start_service:146]
+2018-01-18 21:52:39,009 INFO: controller process started at PID: 17080 [in tool.start_service:146]
+2018-01-18 21:54:31,609 INFO: controller process started at PID: 17211 [in tool.start_service:146]
+2018-01-18 21:54:31,831 INFO: controller process started at PID: 17217 [in tool.start_service:146]
+2018-01-18 22:07:52,672 INFO: controller process started at PID: 17756 [in tool.start_service:146]
+2018-01-18 22:07:52,900 INFO: controller process started at PID: 17762 [in tool.start_service:146]
+2018-01-18 22:07:54,121 DEBUG: calculate host load failure: 2. Traceback (most recent call last):
+  File "/home/hzy/python_workspace/mynah/utils/tool.py", line 191, in calculate_load
+    if store[2]:
+KeyError: 2
+ [in tool.calculate_load:197]
+2018-01-18 22:07:54,122 DEBUG: get store pool failure: 2. Traceback (most recent call last):
+  File "controller.py", line 112, in get_resource
+    resource['load'] = tool.calculate_load(host[0])
+  File "/home/hzy/python_workspace/mynah/utils/tool.py", line 191, in calculate_load
+    if store[2]:
+KeyError: 2
+ [in controller.get_resource:150]
+2018-01-18 22:07:56,248 DEBUG: calculate host load failure: 2. Traceback (most recent call last):
+  File "/home/hzy/python_workspace/mynah/utils/tool.py", line 191, in calculate_load
+    if store[2]:
+KeyError: 2
+ [in tool.calculate_load:197]
+2018-01-18 22:07:56,248 DEBUG: get store pool failure: 2. Traceback (most recent call last):
+  File "controller.py", line 112, in get_resource
+    resource['load'] = tool.calculate_load(host[0])
+  File "/home/hzy/python_workspace/mynah/utils/tool.py", line 191, in calculate_load
+    if store[2]:
+KeyError: 2
+ [in controller.get_resource:150]
+2018-01-18 22:08:08,656 DEBUG: calculate host load failure: 2. Traceback (most recent call last):
+  File "/home/hzy/python_workspace/mynah/utils/tool.py", line 191, in calculate_load
+    if store[2]:
+KeyError: 2
+ [in tool.calculate_load:197]
+2018-01-18 22:08:08,656 DEBUG: get store pool failure: 2. Traceback (most recent call last):
+  File "controller.py", line 112, in get_resource
+    resource['load'] = tool.calculate_load(host[0])
+  File "/home/hzy/python_workspace/mynah/utils/tool.py", line 191, in calculate_load
+    if store[2]:
+KeyError: 2
+ [in controller.get_resource:150]
+2018-01-18 22:08:38,346 DEBUG: calculate host load failure: 2. Traceback (most recent call last):
+  File "/home/hzy/python_workspace/mynah/utils/tool.py", line 191, in calculate_load
+    if store[2]:
+KeyError: 2
+ [in tool.calculate_load:197]
+2018-01-18 22:08:38,346 DEBUG: get store pool failure: 2. Traceback (most recent call last):
+  File "controller.py", line 112, in get_resource
+    resource['load'] = tool.calculate_load(host[0])
+  File "/home/hzy/python_workspace/mynah/utils/tool.py", line 191, in calculate_load
+    if store[2]:
+KeyError: 2
+ [in controller.get_resource:150]
+2018-01-18 22:08:47,264 DEBUG: calculate host load failure: 2. Traceback (most recent call last):
+  File "/home/hzy/python_workspace/mynah/utils/tool.py", line 191, in calculate_load
+    if store[2]:
+KeyError: 2
+ [in tool.calculate_load:197]
+2018-01-18 22:08:47,265 DEBUG: get store pool failure: 2. Traceback (most recent call last):
+  File "controller.py", line 112, in get_resource
+    resource['load'] = tool.calculate_load(host[0])
+  File "/home/hzy/python_workspace/mynah/utils/tool.py", line 191, in calculate_load
+    if store[2]:
+KeyError: 2
+ [in controller.get_resource:150]
+2018-01-18 22:10:29,746 INFO: controller process started at PID: 18103 [in tool.start_service:146]
+2018-01-18 22:10:29,963 INFO: controller process started at PID: 18109 [in tool.start_service:146]
+2018-01-18 22:25:44,303 INFO: controller process started at PID: 19019 [in tool.start_service:146]
+2018-01-18 22:25:44,520 INFO: controller process started at PID: 19025 [in tool.start_service:146]
+2018-01-28 11:27:46,252 INFO: controller process started at PID: 20333 [in tool.start_service:146]
+2018-01-28 11:27:46,546 INFO: controller process started at PID: 20336 [in tool.start_service:146]
+2018-01-28 11:30:32,647 INFO: vm-01 start success. [in controller.vm_management:289]
+2018-01-28 11:30:48,708 INFO: vm-01 destroy success. [in controller.vm_management:300]
+2018-01-28 11:30:58,003 INFO: vm-02 start success. [in controller.vm_management:289]
+2018-01-28 11:33:39,964 INFO: vm-02 destroy success. [in controller.vm_management:300]
+2018-01-28 11:33:51,331 INFO: vm-02 delete success. [in controller.vm_management:327]
+2018-01-28 11:33:51,481 INFO: vm-03 delete success. [in controller.vm_management:327]
+2018-01-28 11:34:27,831 INFO: pre-insert new vm data successful [in controller.vm_create:394]
+2018-01-28 11:34:27,848 INFO: post vm data to remote daemon service successful [in controller.vm_create:403]
+2018-01-28 11:34:27,877 ERROR: 远程虚拟机创建失败.网络错误,状态码: 500 [in controller.vm_create:420]
+2018-02-28 14:39:27,551 INFO: controller process started at PID: 16256 [in tool.start_service:146]
+2018-02-28 14:40:45,663 INFO: controller process started at PID: 16392 [in tool.start_service:146]
+2018-02-28 14:41:05,320 INFO: controller process started at PID: 16426 [in tool.start_service:146]
+2018-02-28 14:41:05,594 INFO: controller process started at PID: 16429 [in tool.start_service:146]
+2018-02-28 14:42:22,670 INFO: controller process started at PID: 16570 [in tool.start_service:146]
+2018-02-28 14:42:22,861 INFO: controller process started at PID: 16576 [in tool.start_service:146]
+2018-03-01 10:48:37,085 INFO: controller process started at PID: 25380 [in tool.start_service:146]
+2018-03-01 10:48:37,354 INFO: controller process started at PID: 25384 [in tool.start_service:146]
+2018-03-01 16:46:21,964 INFO: controller process started at PID: 8553 [in tool.start_service:146]
+2018-03-01 16:46:22,194 INFO: controller process started at PID: 8559 [in tool.start_service:146]
+2018-03-01 16:52:27,300 INFO: controller process started at PID: 8781 [in tool.start_service:146]
+2018-03-01 16:52:27,510 INFO: controller process started at PID: 8790 [in tool.start_service:146]
+2018-03-01 16:53:10,528 INFO: controller process started at PID: 8851 [in tool.start_service:146]
+2018-03-01 16:53:10,746 INFO: controller process started at PID: 8857 [in tool.start_service:146]
+2018-03-01 17:15:10,085 INFO: controller process started at PID: 9419 [in tool.start_service:146]
+2018-03-01 17:15:10,313 INFO: controller process started at PID: 9425 [in tool.start_service:146]
+2018-03-01 17:16:07,747 INFO: controller process started at PID: 9491 [in tool.start_service:146]
+2018-03-01 17:16:07,969 INFO: controller process started at PID: 9497 [in tool.start_service:146]
+2018-03-01 17:16:09,446 INFO: controller process started at PID: 9507 [in tool.start_service:146]
+2018-03-01 17:16:09,643 INFO: controller process started at PID: 9513 [in tool.start_service:146]
+2018-03-01 17:17:57,064 INFO: controller process started at PID: 9585 [in tool.start_service:146]
+2018-03-01 17:17:57,262 INFO: controller process started at PID: 9591 [in tool.start_service:146]
+2018-03-01 17:17:58,308 INFO: controller process started at PID: 9601 [in tool.start_service:146]
+2018-03-01 17:17:58,520 INFO: controller process started at PID: 9607 [in tool.start_service:146]
+2018-03-02 09:16:28,725 INFO: controller process started at PID: 7079 [in tool.start_service:146]
+2018-03-02 09:16:29,832 INFO: controller process started at PID: 7086 [in tool.start_service:146]
+2018-03-02 09:19:19,802 INFO: controller process started at PID: 7267 [in tool.start_service:146]
+2018-03-02 09:19:19,971 INFO: controller process started at PID: 7273 [in tool.start_service:146]
+2018-03-02 09:34:55,988 INFO: controller process started at PID: 8146 [in tool.start_service:146]
+2018-03-02 09:34:56,153 INFO: controller process started at PID: 8152 [in tool.start_service:146]
+2018-03-02 11:31:30,298 INFO: controller process started at PID: 13959 [in tool.start_service:146]
+2018-03-02 11:31:30,470 INFO: controller process started at PID: 13965 [in tool.start_service:146]
+2018-03-02 11:35:52,597 INFO: controller process started at PID: 14154 [in tool.start_service:146]
+2018-03-02 11:35:52,770 INFO: controller process started at PID: 14160 [in tool.start_service:146]
+2018-03-02 18:44:52,034 INFO: controller process started at PID: 28202 [in tool.start_service:146]
+2018-03-02 18:44:52,288 INFO: controller process started at PID: 28208 [in tool.start_service:146]
+2018-03-03 09:38:58,326 INFO: controller process started at PID: 13573 [in tool.start_service:146]
+2018-03-03 09:38:58,503 INFO: controller process started at PID: 13579 [in tool.start_service:146]
+2018-03-03 10:26:34,920 INFO: controller process started at PID: 15754 [in tool.start_service:146]
+2018-03-03 10:26:35,102 INFO: controller process started at PID: 15760 [in tool.start_service:146]
+2018-03-03 10:37:13,004 INFO: controller process started at PID: 16145 [in tool.start_service:146]
+2018-03-03 10:37:13,182 INFO: controller process started at PID: 16151 [in tool.start_service:146]
+2018-03-03 10:38:57,293 INFO: controller process started at PID: 16195 [in tool.start_service:146]
+2018-03-03 10:38:57,473 INFO: controller process started at PID: 16201 [in tool.start_service:146]
+2018-03-06 15:03:53,459 INFO: controller process started at PID: 12223 [in tool.start_service:76]
+2018-03-06 15:03:53,682 INFO: controller process started at PID: 12229 [in tool.start_service:76]
+2018-03-06 15:04:53,836 INFO: controller process started at PID: 12310 [in tool.start_service:76]
+2018-03-06 15:04:54,023 INFO: controller process started at PID: 12316 [in tool.start_service:76]

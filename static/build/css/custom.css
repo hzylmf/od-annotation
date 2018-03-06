@@ -1,0 +1,10 @@
+.ticket-img-side,.ticket-img-main{
+    height:600px;
+}
+.ticket-img-side button{
+    margin-top: 200px;
+}
+.box{
+    background-color:#f00;
+    opacity:0.3;
+}
