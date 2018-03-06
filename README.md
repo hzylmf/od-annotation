@@ -18,4 +18,8 @@
 
 ## 说明
 * 依赖python3
+* 标注数据在static/dataset/annotation.txt文件中，每行一条标注数据，格式为`filename,x1,y1,x2,y2,classname`，x1,y1,x2,y2分别表示左上角和右下角坐标
 
+## 后续支持
+* 标注类别配置
+* 标注格式支持VOC2007格式
