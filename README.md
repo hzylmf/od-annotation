@@ -15,6 +15,7 @@
 2. 重命名标注样本，采用前导0方式编号，共6位(000001-0000xx)，样本为JPG格式
 3. 拷贝样本到static/dataset目录
 4. 启动标注工具：`python3 app.py --start|stop|restart`
+5. 访问`http://localhost:5000`开始标注
 
 ## 说明
 * 依赖python3
