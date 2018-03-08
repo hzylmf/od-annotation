@@ -7,4 +7,10 @@
 .box{
     background-color:#f00;
     opacity:0.3;
+    border:1px solid #53c3e4;
+}
+div {
+      -moz-user-select:none;
+      -webkit-user-select:none;
+      user-select:none;
 }

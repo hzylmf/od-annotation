@@ -15,4 +15,7 @@ LOG_LEVEL = 'info'
 PID_FILE = 'od-annotation.pid'
 SERVER_PORT = 5000
 
-
+# 标注配置
+SAMPLE_TYPE_SET = ['jpg', 'jpeg', 'png', 'bmp']
+SAMPLE_FILE_TYPE = 'jpg' # 样本图片格式
+SAMPLE_FILE_PATH = './dataset' # 样本图片存放目录

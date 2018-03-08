@@ -47,14 +47,50 @@ $(function(){
         var regionLoc = $('#cur_loc').html();
         var regionClass = $('input[name="radio_region"]:checked').val();
         if(regionLoc=='') return;
+        if(regionClass==null){
+            layer.msg('请选择标注类别');
+            return;
+        }
+
         saveRegionInfo(picName,regionLoc,regionClass);
+    });
+    get_labels();
+    $('#radio-type').click(function(){
+        $(document).focus();
     });
 });
 
+function get_labels(){
+    $.ajax({
+		type : "GET",
+		dataType : "json",
+		url : "/api/annotation/labels?"+new Date(),
+		beforeSend:function(){
+		},
+		success : function(result){
+		    if(result.message=='success'){
+		        var html = '标注类型：';
+		        index = 0;
+		        for (var i in result.data){
+		            var id = 'region_'+result.data[i].name;
+		            var value = result.data[i].name;
+		            var text = result.data[i].desc;
+		            html += '<label class="radio-inline"><input type="radio" name="radio_region" id="'+id+'" value="'+value+'">';
+		            html += ' '+text+'</label>';
+		            index++;
+		        }
+		        console.log(html);
+                $('#radio-type').html(html);
+		    }
+		},
+		error: function(){
+		}
+	});
+}
+
 function loadTicketPic(index){
     picNumberStr = PrefixInteger(index,6);
-    url = "/static/dataset/"+picNumberStr+".jpg?"+new Date();
-    console.log(url);
+    url = "/api/annotation/sample?index="+picNumberStr;
     $('#ticket-img').css({"background":"url('"+url+"') no-repeat left top"});
     $('#cur_id').html(picNumberStr+'.jpg');
     $('.box').remove();
@@ -74,6 +110,7 @@ function saveRegionInfo(picName,regionLoc,regionClass){
 		    if(result.message=='success'){
 		        var textarea = $('#annotation_status').append(picName+','+regionLoc+","+regionClass+" saved!\n");
 		        textarea.scrollTop(textarea[0].scrollHeight - textarea.height());
+		        $('#cur_loc').html('');
 		    }
 		},
 		error: function(){

@@ -1,0 +1,7 @@
+# name: description
+type1:标签1
+type2:标签2
+type3:标签3
+type4:标签4
+type5:标签5
+type6:标签6
