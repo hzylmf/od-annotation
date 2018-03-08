@@ -2,46 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="973f5b23-1852-4164-992a-295cb5a2df6b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/od-annotation.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/VOC2007/Annotations/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/VOC2007/ImageSets/Main/test.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/VOC2007/ImageSets/Main/train.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/VOC2007/ImageSets/Main/trainval.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/VOC2007/ImageSets/Main/val.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/VOC2007/ImageSets/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/VOC2007/JPEGImages/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/annotation.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/annotation/label_config.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/build/js/draw_roi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/xml2dict.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/dataset/annotation.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dataset/000001.jpg" afterPath="$PROJECT_DIR$/dataset/000001.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dataset/000002.jpg" afterPath="$PROJECT_DIR$/dataset/000002.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dataset/000003.jpg" afterPath="$PROJECT_DIR$/dataset/000003.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dataset/000004.jpg" afterPath="$PROJECT_DIR$/dataset/000004.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dataset/000005.jpg" afterPath="$PROJECT_DIR$/dataset/000005.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dataset/000006.jpg" afterPath="$PROJECT_DIR$/dataset/000006.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dataset/000007.jpg" afterPath="$PROJECT_DIR$/dataset/000007.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dataset/000008.jpg" afterPath="$PROJECT_DIR$/dataset/000008.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dataset/000009.jpg" afterPath="$PROJECT_DIR$/dataset/000009.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dataset/000010.jpg" afterPath="$PROJECT_DIR$/dataset/000010.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/mynah_controller.log" afterPath="$PROJECT_DIR$/logs/mynah_controller.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/sys.log" afterPath="$PROJECT_DIR$/logs/sys.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/od-annotation.pid" afterPath="$PROJECT_DIR$/od-annotation.pid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/build/css/custom.css" afterPath="$PROJECT_DIR$/static/build/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/build/js/custom.js" afterPath="$PROJECT_DIR$/static/build/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/tool.py" afterPath="$PROJECT_DIR$/utils/tool.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -131,8 +92,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="398">
-                <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+              <first_editor relative-caret-position="650">
+                <caret line="49" column="67" lean-forward="false" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -587,8 +548,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="398">
-            <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <first_editor relative-caret-position="650">
+            <caret line="49" column="67" lean-forward="false" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
             <folding />
           </first_editor>
           <second_editor />
