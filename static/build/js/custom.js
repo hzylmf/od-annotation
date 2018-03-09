@@ -89,7 +89,7 @@ function get_labels(){
 
 function loadTicketPic(index){
     picNumberStr = PrefixInteger(index,6);
-    url = "/api/annotation/sample?index="+picNumberStr;
+    url = "/api/annotation/sample?index="+picNumberStr+'&time='+new Date();
     $('#ticket-img').css({"background":"url('"+url+"') no-repeat left top"});
     $('#cur_id').html(picNumberStr);
     $('.box').remove();
