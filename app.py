@@ -63,7 +63,7 @@ def get_labels():
 # 标注接口
 @app.route('/api/annotation/save', methods=['POST'])
 def save_annotation():
-    pic_name = request.form['pic_name']
+    pic_id = request.form['pic_id']
     region_loc = request.form['region_loc']
     region_class = request.form['region_class']
     path_annotation = 'annotation/annotation.txt'
@@ -75,6 +75,7 @@ def save_annotation():
             file = codecs.open(path_annotation, mode='r+', encoding='utf-8')
             lines = file.readlines()
             file.seek(0, 0)
+            pic_name = pic_id + '.' + sys_config.SAMPLE_FILE_TYPE
             content = pic_name + ',' + region_loc + ',' + region_class
             find = False
             for line in lines:

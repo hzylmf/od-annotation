@@ -43,7 +43,7 @@ $(function(){
         }
     });
     $('#btn_save').click(function(){
-        var picName = $('#cur_id').html();
+        var picId = $('#cur_id').html();
         var regionLoc = $('#cur_loc').html();
         var regionClass = $('input[name="radio_region"]:checked').val();
         if(regionLoc=='') return;
@@ -52,7 +52,7 @@ $(function(){
             return;
         }
 
-        saveRegionInfo(picName,regionLoc,regionClass);
+        saveRegionInfo(picId,regionLoc,regionClass);
     });
     get_labels();
     $('#radio-type').click(function(){
@@ -79,7 +79,6 @@ function get_labels(){
 		            html += ' '+text+'</label>';
 		            index++;
 		        }
-		        console.log(html);
                 $('#radio-type').html(html);
 		    }
 		},
@@ -92,17 +91,17 @@ function loadTicketPic(index){
     picNumberStr = PrefixInteger(index,6);
     url = "/api/annotation/sample?index="+picNumberStr;
     $('#ticket-img').css({"background":"url('"+url+"') no-repeat left top"});
-    $('#cur_id').html(picNumberStr+'.jpg');
+    $('#cur_id').html(picNumberStr);
     $('.box').remove();
     $('#cur_loc').html('');
 }
 
-function saveRegionInfo(picName,regionLoc,regionClass){
+function saveRegionInfo(picId,regionLoc,regionClass){
     $.ajax({
 		type : "POST",
 		dataType : "json",
 		url : "/api/annotation/save?"+new Date(),
-		data : {"pic_name":picName, "region_loc":regionLoc,"region_class":regionClass},
+		data : {"pic_id":picId, "region_loc":regionLoc,"region_class":regionClass},
 		beforeSend:function(){
 		},
 		success : function(result){
