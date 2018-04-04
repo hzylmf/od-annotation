@@ -5,7 +5,7 @@ $(function(e){
   var startX, startY, diffX, diffY;
   // 是否拖动，初始为 false
   var dragging = false;
-  var draw_obj = $('#ticket-img');
+  var draw_obj = $('#img');
   // 鼠标按下
   document.onmousedown = function(e) {
       startX = e.pageX;
@@ -26,10 +26,12 @@ $(function(e){
           diffX = startX - e.target.offsetLeft;
           diffY = startY - e.target.offsetTop;
       }
-      else if(e.target.className.indexOf("ticket-img-main")!=-1){// 如果鼠标在 样本区域 被按下
+      else if(e.target.className.indexOf("img-main")!=-1){// 如果鼠标在 样本区域 被按下
           // 在页面创建 box
           var active_box = document.createElement("div");
           active_box.id = "active_box";
+          active_box.setAttribute("box_id",'box_'+boxId); // 设置
+          boxId++;
           active_box.className = "box";
           active_box.style.position = 'absolute';
           active_box.style.top = startY + 'px';
@@ -44,6 +46,8 @@ $(function(e){
     // 如果鼠标在 box 上按下右键
     if(e.target.className.match(/box/)) {
       document.body.removeChild(e.target);
+      delete boxListOfSample[$(e.target).attr('box_id')];
+      updateCurTagStatus();
       $('#cur_loc').html('');
       //不继续传递右键事件，即不弹出菜单
       return false;
@@ -88,11 +92,36 @@ $(function(e){
   };
 
   function updateLoc(obj){
-    ticket_img = document.getElementById("ticket-img");
-    x_left = obj.offsetLeft - ticket_img.offsetLeft;
-    y_left = obj.offsetTop - ticket_img.offsetTop;
+    img = document.getElementById("img");
+    x_left = obj.offsetLeft - img.offsetLeft;
+    y_left = obj.offsetTop - img.offsetTop;
     x_right = x_left + $(obj).width();
     y_right = y_left + $(obj).height();
-    $('#cur_loc').html(x_left+','+y_left+','+x_right+','+y_right);
+    var regionLoc = x_left+','+y_left+','+x_right+','+y_right;
+    $('#cur_loc').html(regionLoc);
+    var picId = $('#cur_id').html();
+    var regionClass = $('input[name="radio_region"]:checked').val();
+    tagStr = picId+','+regionLoc+","+regionClass;
+    box_id = $(obj).attr('box_id');
+    boxListOfSample[box_id] = tagStr;
+    updateCurTagStatus();
   }
 });
+
+function updateCurTagStatus(){
+    tagStrTotal = '';
+    for(key in boxListOfSample){
+        tagStrTotal+=boxListOfSample[key]+'\n';
+    }
+    var textarea = $('#annotation_cur_status').val(tagStrTotal);
+    textarea.scrollTop(textarea[0].scrollHeight - textarea.height());
+}
+
+function updateTotalTagStatus(){
+    tagStrTotal = '';
+    for(key in boxListOfSample){
+        tagStrTotal+=boxListOfSample[key]+'\n';
+    }
+    var textarea = $('#annotation_total_status').append(tagStrTotal);
+    textarea.scrollTop(textarea[0].scrollHeight - textarea.height());
+}

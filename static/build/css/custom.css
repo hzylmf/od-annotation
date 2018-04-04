@@ -1,7 +1,7 @@
-.ticket-img-side,.ticket-img-main{
+.img-side,.img-main{
     height:600px;
 }
-.ticket-img-side button{
+.img-side button{
     margin-top: 200px;
 }
 .box{

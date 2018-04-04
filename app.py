@@ -12,7 +12,6 @@ from flask import request
 
 import config as sys_config
 import utils.tool as tool
-from logger_manager import controller_logger as logger
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -26,7 +25,7 @@ def index():
     names = [name for name in os.listdir(sys_config.SAMPLE_FILE_PATH) \
              if name.split('.')[-1].lower() in sys_config.SAMPLE_TYPE_SET]
     return render_template('index.html', \
-                           ticket_count=len(names), \
+                           sample_count=len(names), \
                            sample_type=sys_config.SAMPLE_FILE_TYPE)
 
 
@@ -63,33 +62,22 @@ def get_labels():
 # 标注接口
 @app.route('/api/annotation/save', methods=['POST'])
 def save_annotation():
-    pic_id = request.form['pic_id']
-    region_loc = request.form['region_loc']
-    region_class = request.form['region_class']
+    tags = request.form['tags']
+    tags_new = ''
+    for tag in tags.split('\n'):
+        if tag == '':
+            continue
+        values = tag.split(',', maxsplit=1)
+        tags_new += values[0] + '.' + sys_config.SAMPLE_FILE_TYPE + ',' + values[1]+'\n'
+
     path_annotation = 'annotation/annotation.txt'
     try:
         if mu.acquire(True):
             if not os.path.exists(path_annotation):
                 file = codecs.open(path_annotation, mode='a+', encoding='utf-8')
                 file.close()
-            file = codecs.open(path_annotation, mode='r+', encoding='utf-8')
-            lines = file.readlines()
-            file.seek(0, 0)
-            pic_name = pic_id + '.' + sys_config.SAMPLE_FILE_TYPE
-            content = pic_name + ',' + region_loc + ',' + region_class
-            find = False
-            for line in lines:
-                line = line.strip()
-                line_new = line
-                values = line.split(',')
-                if values[0] + values[-1] == pic_name + region_class:
-                    line_new = content
-                    find = True
-                if not line_new.endswith('\n'):
-                    line_new += '\n'
-                file.write(line_new)
-            if not find:
-                file.write(content + '\n')
+            file = codecs.open(path_annotation, mode='a+', encoding='utf-8')
+            file.write(tags_new)
             file.close()
             mu.release()
     except Exception as e:

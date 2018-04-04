@@ -21,12 +21,12 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-1 ticket-img-side">
+        <div class="col-md-1 img-side">
             <button class="btn btn-default btn-lg" id="side_left" type="button" value="left"><span
                     class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
         </div>
-        <div class="col-md-10 ticket-img-main" id="ticket-img">&nbsp;</div>
-        <div class="col-md-1 ticket-img-side">
+        <div class="col-md-10 img-main" id="img">&nbsp;</div>
+        <div class="col-md-1 img-side">
             <button class="btn btn-default btn-lg" id="side_right" type="button" value="right"><span
                     class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
         </div>
@@ -45,14 +45,21 @@
             <input type="text" id="jump_page" value="" style="width:100px" placeholder="跳转到指定页"/>
             <span>当前文件：<strong id="cur_id"></strong></span>
             <span>坐标区域：<strong id="cur_loc"></strong></span>
-            <button class="btn btn-default" id="btn_save" type="button">保存</button>
         </div>
     </div>
     <div  class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3">
-            <span>标注状态：</span>
-            <textarea class="form-control" id="annotation_status" rows="6"></textarea>
+            <span>当前样本标注状态：</span>
+            <textarea class="form-control" id="annotation_cur_status" rows="6"></textarea>
+        </div>
+        <div class="col-md-3">
+            <span>所有样本标注状态：</span>
+            <textarea class="form-control" id="annotation_total_status" rows="6"></textarea>
+        </div>
+        <div class="col-md-1">
+            <br/>
+            <button class="btn btn-default" id="btn_save" type="button">保存</button>
         </div>
     </div>
 </div>
@@ -65,7 +72,7 @@
 <script src="/static/build/js/custom.js"></script>
 <script src="/static/build/js/draw_roi.js"></script>
 <script type="text/javascript">
-  ticketCount = "{{ ticket_count }}";
+  var sampleCount = "{{ sample_count }}";
 </script>
 </body>
 </html>

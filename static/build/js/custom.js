@@ -1,26 +1,28 @@
 /**
  * 业务相关的JS处理代码
 */
-ticketCount = 0;
-ticketCurrentIndex = 1;
+sampleCount = 0;
+sampleCurrentIndex = 1;
+boxId = 1;
+boxListOfSample = {}; //一张样本图片的标注集合(box_id为key)
 $(function(){
-    $('#total').text(ticketCount);
-    loadTicketPic(ticketCurrentIndex);
+    $('#total').text(sampleCount);
+    loadSamplePic(sampleCurrentIndex);
     $('#side_left').click(function(){
         $('#btn_save').click();
-        ticketCurrentIndex -= 1;
-        if(ticketCurrentIndex<=0){
-            ticketCurrentIndex = ticketCount;
+        sampleCurrentIndex -= 1;
+        if(sampleCurrentIndex<=0){
+            sampleCurrentIndex = sampleCount;
         }
-        loadTicketPic(ticketCurrentIndex);
+        loadSamplePic(sampleCurrentIndex);
     });
     $('#side_right').click(function(){
         $('#btn_save').click();
-        ticketCurrentIndex += 1;
-        if(ticketCurrentIndex>ticketCount){
-            ticketCurrentIndex = 1;
+        sampleCurrentIndex += 1;
+        if(sampleCurrentIndex>sampleCount){
+            sampleCurrentIndex = 1;
         }
-        loadTicketPic(ticketCurrentIndex);
+        loadSamplePic(sampleCurrentIndex);
     });
     $(document).keyup(function(event){
       if (event.keyCode === 37){//left
@@ -34,25 +36,28 @@ $(function(){
             var indexStr = $(this).val();
             index = parseInt(indexStr);
             if(index<=0 || indexStr==''){
-                index = ticketCurrentIndex;
-            }else if(index>ticketCount){
-                index = ticketCount;
+                index = sampleCurrentIndex;
+            }else if(index>sampleCount){
+                index = sampleCount;
             }
-            ticketCurrentIndex = index;
-            loadTicketPic(index);
+            sampleCurrentIndex = index;
+            loadSamplePic(index);
         }
     });
     $('#btn_save').click(function(){
-        var picId = $('#cur_id').html();
-        var regionLoc = $('#cur_loc').html();
-        var regionClass = $('input[name="radio_region"]:checked').val();
-        if(regionLoc=='') return;
-        if(regionClass==null){
-            layer.msg('请选择标注类别');
+        if (JSON.stringify(boxListOfSample) == '{}'){
+            layer.msg('请先进行标注');
             return;
         }
-
-        saveRegionInfo(picId,regionLoc,regionClass);
+        tagStrTotal = '';
+        for(key in boxListOfSample){
+            tagStrTotal+=boxListOfSample[key]+'\n';
+        }
+        saveRegionInfo(tagStrTotal);
+        $('#cur_loc').html('');
+        updateTotalTagStatus();
+        boxId = 1;
+        boxListOfSample = {};
     });
     get_labels();
     $('#radio-type').click(function(){
@@ -75,7 +80,11 @@ function get_labels(){
 		            var id = 'region_'+result.data[i].name;
 		            var value = result.data[i].name;
 		            var text = result.data[i].desc;
-		            html += '<label class="radio-inline"><input type="radio" name="radio_region" id="'+id+'" value="'+value+'">';
+		            if(index==0){
+		                html += '<label class="radio-inline"><input type="radio" name="radio_region" checked="checked" id="'+id+'" value="'+value+'">';
+		            }else{
+		                html += '<label class="radio-inline"><input type="radio" name="radio_region" id="'+id+'" value="'+value+'">';
+		            }
 		            html += ' '+text+'</label>';
 		            index++;
 		        }
@@ -87,30 +96,25 @@ function get_labels(){
 	});
 }
 
-function loadTicketPic(index){
+function loadSamplePic(index){
     picNumberStr = PrefixInteger(index,6);
     url = "/api/annotation/sample?index="+picNumberStr+'&time='+new Date();
-    $('#ticket-img').css({"background":"url('"+url+"') no-repeat left top"});
+    $('#img').css({"background":"url('"+url+"') no-repeat left top"});
     $('#cur_id').html(picNumberStr);
     $('.box').remove();
     $('#cur_loc').html('');
 }
 
-function saveRegionInfo(picId,regionLoc,regionClass){
+function saveRegionInfo(tagResult){
     $.ajax({
 		type : "POST",
 		dataType : "json",
 		url : "/api/annotation/save?"+new Date(),
-		data : {"pic_id":picId, "region_loc":regionLoc,"region_class":regionClass},
+		data : {'tags':tagResult},
 		beforeSend:function(){
 		},
 		success : function(result){
 		    layer.msg(result.message);
-		    if(result.message=='success'){
-		        var textarea = $('#annotation_status').append(picName+','+regionLoc+","+regionClass+" saved!\n");
-		        textarea.scrollTop(textarea[0].scrollHeight - textarea.height());
-		        $('#cur_loc').html('');
-		    }
 		},
 		error: function(){
 		}
