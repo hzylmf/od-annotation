@@ -84,6 +84,7 @@ $(function(e){
               document.body.removeChild(ab);
           }else{
               updateLoc(ab);
+              $(ab).html('<div class="box_label">'+$('input[name="radio_region"]:checked').parent().text()+"</div>");
           }
       }else if(document.getElementById("moving_box") !== null) {
         var ab = document.getElementById("moving_box");

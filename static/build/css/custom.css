@@ -6,8 +6,15 @@
 }
 .box{
     background-color:#f00;
-    opacity:0.3;
+    opacity:0.5;
     border:1px solid #53c3e4;
+
+}
+.box_label{
+    background:#000;
+    opacity:1;
+    color:#fff;
+    font-size:20px;
 }
 div {
       -moz-user-select:none;

@@ -1,7 +1,7 @@
 # name: description
-type1:标签1
-type2:标签2
-type3:标签3
-type4:标签4
-type5:标签5
-type6:标签6
+people:人
+dog:狗
+sofa:沙发
+chair:椅子
+car:小车
+train:火车
