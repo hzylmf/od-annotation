@@ -112,15 +112,22 @@ if __name__ == '__main__':
     parser.add_argument('--start', action='store_true', help='running background')
     parser.add_argument('--stop', action='store_true', help='shutdown process')
     parser.add_argument('--restart', action='store_true', help='restart process')
+    parser.add_argument('--daemon', action='store_true', help='restart process')
     parser.add_argument('--convert2voc', action='store_true', help='restart process')
 
     FLAGS = parser.parse_args()
     if FLAGS.start:
-        tool.start_service(run, sys_config.PID_FILE)
+        if FLAGS.daemon:
+            tool.start_daemon_service(run, sys_config.PID_FILE)
+        else:
+            tool.start_service(run, sys_config.PID_FILE)
     elif FLAGS.stop:
         tool.shutdown_service(sys_config.PID_FILE)
     elif FLAGS.restart:
         tool.shutdown_service(sys_config.PID_FILE)
-        tool.start_service(run, sys_config.PID_FILE)
+        if FLAGS.daemon:
+            tool.start_daemon_service(run, sys_config.PID_FILE)
+        else:
+            tool.start_service(run, sys_config.PID_FILE)
     elif FLAGS.convert2voc:
         tool.convert_to_voc2007()

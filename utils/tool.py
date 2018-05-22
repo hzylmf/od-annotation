@@ -68,8 +68,17 @@ def save_pid(path, pid):
         fp.write(str(pid))
 
 
-# 启动服务进程
+# 非daemon方式启动服务端
 def start_service(func, pid_file):
+    pid = os.getpid()
+    # saved PID
+    logger.info('controller process started at PID: ' + str(pid))
+    save_pid(pid_file, pid)
+    func()
+
+
+# daemon方式启动服务端
+def start_daemon_service(func, pid_file):
     pid = os.fork()
     if pid == 0:
         func()
