@@ -11,6 +11,9 @@ LOG_DIR = os.path.join(basedir, 'logs')
 LOG_FORMAT = '%(asctime)s %(levelname)s: %(message)s [in %(module)s.%(funcName)s:%(lineno)d]'
 LOG_LEVEL = 'info'
 
+if not os.path.exists(LOG_DIR):
+    os.mkdir(LOG_DIR)
+
 # 节点配置
 PID_FILE = 'od-annotation.pid'
 SERVER_PORT = 5000
